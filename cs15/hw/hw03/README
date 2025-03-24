@@ -1,0 +1,120 @@
+/**********************************************************
+* HW 3: Binary Search Tree
+* CS 15
+* README
+* Ian Abou-Jaoude
+*********************************************************/
+
+
+--------The purpose of the program:--------
+
+Creates a class for a data structure that organizes integers. The data 
+structure resembles the shape of a tree. At the beginning lies the root, and 
+the root points to two children node, one larger number to the right, and one 
+smaller to the left. These two each have their own children nodes organized 
+in the same direction as the previous. This continues until their are no more
+numbers. This type of data structure can be useful to organize larger sets
+of integer data types as it organizes them in a way that makes looking for 
+them a lot faster than looking through a one dementional array or list.
+
+
+--------Acknowledgements:--------
+
+n/a
+
+
+-------Files-------
+
+README - This file with all of my information about the assignment
+
+BinarySearchTree.h - Header file for the Binary Search Tree class
+
+BinarySearchTree.cpp - Implementation file for the Binary Search Tree class
+
+hw3.cpp - Usage of the Binary Search Tree, and tesing
+
+unit_tests.h - Tests each public function explicitly from the BST 
+               implementation
+
+
+-------Compiling & running-------
+
+
+To compile - make - compiles the implementation of class
+
+To run - ./hw3 - Runs hw3.cpp tester
+
+To run unit_tests - unit_test - Compiles and run unit_tests.h
+
+
+-------Testing-------
+
+First, I implemented the functions in an order that suited my capcity to test.
+Some of the public functions help significantly when trying to testing. For 
+my implementation process I implemented insert before implementing functions
+that came before to be able to use it when testing. All of the testing that 
+I did was done through unit_test. I tested each function and progressively
+added more functions to use in my tests. Each test has sets of BST's that
+I though might have the best chance of breaking my code. I would draw out
+the BST's that I was working with and would try to give them as many
+variations as possible. For example I would give the BST a leaf node with
+no sibling or switch the positions. I would make the BST's unbalanced, or
+I would add different multiplicities where I though it might be harder to 
+catch. At one point while testing I had to implement a helper test 
+function that was commented called print_info. This was done for unit test
+called total_count works. In that function I printed out every data point
+and it's associated count because for some reason I was not implementating 
+the total count function correctly. I thought it was becuase the counts and 
+data points did not match but after implementing this and running the helper
+test function I realized that wasn't the problem. This allowed me to go back
+and look again at my total count function and realize that the problem was 
+there where I was calling on one of the wrong functions recursively. Finally
+I diff tested with the the implementation and what was given to see if I had
+the given tests down.
+
+
+-------HW3 Questions-------
+
+1. Review the remove function explanation in the homework specification. Will 
+your implementation of the remove function use (the privately defined) 
+find_min() or find_max()? Why?
+
+Yes, find_min will be use. It is easiest in my eyes to replace the node to 
+remove with the smallest node from the right of that node that is being
+removed. This will make the rest of the BST still work and the min has the 
+fewest subtrees to consider.
+
+2. Is it possible for (the privately defined) find_min() or find_max() to
+return a value that does not point to a valid node? Why or why not?
+
+Yes, in the way that I was thinking of doing this, if the right subtree is
+empty than there can be no minimum.
+
+3. a. If you answered yes to 2, then what value is returned? In what
+case will that value be returned?
+
+When trying to return the minimum of an empty subrtee.
+
+4. Write pseudocode for your private find_min() function.
+
+is left empty?
+    yes - return this node
+    no - repeat: is left empty now using node to left
+
+5. Write pseudocode for your private find_max() function.
+
+is right empty?
+    yes - return this node
+    no - repeat: is right empty? now using node to right
+
+6. Write pseudocode for your private post_order_delete() function.
+
+this node doesn't exist?
+    stop
+
+postorder_delete with left subtree
+postorder_delete with right subtree
+
+delete this node
+
+

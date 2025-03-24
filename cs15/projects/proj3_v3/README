@@ -1,0 +1,83 @@
+/**********************************************************
+* Project 3: Gerp
+* CS 15
+* README
+* Ian Abou-Jaoude & Elijah Weston
+*********************************************************/
+
+
+
+/************** WEEK ONE **************/
+
+Compile/run:
+
+g++ -o stringProcessingCompile -Wall -Wextra -Werror stringProcessing.h 
+stringProcessing.cpp stringProcessingTest.cpp
+
+g++ -o WordInstanceTest -Wall -Wextra -Werror WordInstance.h WordInstance.cpp
+WordInstanceTest.cpp
+
+To compile the FSTreeTraversal executable, type "make" into the terminal.
+
+Testing was done through the program stringProcessingTest.cpp that has a main
+which is commented out. No bugs were found in the first phase of our testing.
+The way to compile and run the test is given above. 
+
+
+/************** WEEK TWO **************/
+
+1. Purpose:
+    "gerp" is a program which gets every line the a given word appears in,
+    within a given file, for its client. Working in a two step process, 
+    "gerp" indexes a given set of files from a certain directory, then
+    prompts the user for a query which is matched within the index. The
+    program then prints every line the query appears on in a given output file.
+
+2. Acknowledgements:
+    Ian and I recieved help from various TAs in office hours. We also used
+    the lecture slides to help gain a better understanding of HashTables.
+
+3. Files:
+    DirNode.h:
+
+    FSTree.h:
+
+    gerp.cpp:
+
+    HashTable.cpp:
+
+    HashTable.h: 
+
+    HashTableTest.cpp:
+
+    stringProcessing.h: 
+
+    stringProcessing.cpp:
+
+    stringProcessingTest.cpp
+
+    WordList.h
+
+    WordList.cpp
+
+    testWordList.cpp
+
+    WordInstance.h
+
+    WordInstance.cpp
+
+    WordInstanceTest.cpp
+
+    unit_tests.h: 
+
+    Makefile:
+
+4. Compilation:
+    To compile our implementation of "gerp," type "make" in the terminal.
+    To run our program, execute "gerp" with command "./gerp" followed by
+    the full path of the directory you wish to index and an output file
+    to which to send the results of your queries.
+
+    Usage: ./ gerp inputDirectory outputFile
+
+5. 

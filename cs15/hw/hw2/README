@@ -1,0 +1,92 @@
+A. Title & name
+
+Homework2_Liked, by Ian Abou-Jaoude
+
+
+B. The purpose of the program
+
+The purpose of this program is similar to that of CharArrayList, in that we 
+are creating a class that allows us to do things that a strings would be
+able to do by connecting characters together. We are able to replicate
+what happens under the hood in the C++ library for what strings are able to
+do by connecting character using a linked list.
+
+
+C. Acknowledgements
+
+None
+
+
+D. My files
+
+CharLinkedList.h is the header file that contains private data members and
+private and public function for the CharLinkedList.cpp implementation. The
+CharLinkedList.cpp is the implementation for a linked list for chars. The 
+Makefile compiles all the files and allows them to by compiled with one
+terminal entry using unit_test. Unit_test allows us to test the cpp 
+file for the implementation.
+
+
+E. How to compile and run
+
+The Makefile helps to compile everything that the CharLinkedList.cpp needs to
+function and using unit_test we can actually see how the client would use
+this class.
+
+
+F. Outline of the data structures of LinkedLists
+
+Pointers and the heap are two incredible tools that allow us and this program
+to use the LinkedList data structure. Pointers in this program are used to 
+link nodes that are structs which contain a data char and two pointers to 
+nodes. These nodes are the ones that come before and after in the list. Doing
+this lets us traverse this list using the pointers to be able to edit elements
+and alter the list in different ways. Using the heap we can store these nodes 
+to add to them add new ones and delete them. 
+
+
+G. How I tested
+
+The testing for unit_test is pretty good but not always exact in telling 
+you where you went wrong. Thats why I made main. I went in there and I was
+able to gather a lot more information when I came across errors. At several
+points while programming I was getting seg faults but had not idea because
+the unit test doesnt tell us that. Checking it with main I realized I needed
+to often initialize or reassing front and back when I was allocating or 
+deallocating heap memory. The unit_test was also very helpful to quickly
+tell which functions were giving me the right output and that my errors
+that I was catching were correct. I used the toString() a lot to check
+the size and the contents of lists that I was using with assertations.
+Overall the testing helped me catch many bugs that I was having and allowed
+me to apply them onwards to my future functions I wrote as I made realizations
+about linked lists.
+
+
+QUESTIONS:
+
+1. Which functions in the interface were easier to implement for
+linked lists compared to array lists? Why?
+
+For me the easier functions to implement were removeat,
+popping front and back and push at front or back. This is because I only 
+had to deal with the nodes before and after for these instead of changing
+the whole array all together.
+
+2. Which functions in the interface were harder to implement for
+linked lists compared to array lists? Why?
+
+InsertAt, InsertInOrder, ElementAt, clear, destructor, replaceat. These were 
+harder because unlike arrays you can't just call on the element that you want
+and use it. With linked list you must manually traverse through everything
+to be able to make changes. The destructor is harder because you have to 
+delete each node individually instead of one line for the array.
+
+3.  If a client had an existing program that uses CharArrayLists,
+what changes would they have to make to their code to switch to
+CharLinkedLists?
+
+Almost nothing. The functions are all called the same and take the exact
+same input so the client's interface would not change at all. This applies to 
+the functions that we wrote from hw1 and two. Even though the
+private helper functions are different and the implementation is different the
+client doesnt have to worry about it.

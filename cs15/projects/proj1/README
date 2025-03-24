@@ -1,0 +1,173 @@
+/**********************************************************
+* Project 1: Metro Simulator
+* CS 15
+* README
+* Ian Abou-Jaoude
+*********************************************************/
+
+Compile/run:
+     - Compile using
+            make MetroSim
+     - run executable with
+            ./MetroSim stationsFile passFile [commands]
+
+     - Phase one testing done through unit_test command
+     - Phase two MetroSim testing using: 
+     
+     g++ -o main_test -Wall -Wextra -Werror deleted_test_code_main.cpp \
+     MetroSim.cpp Passenger.cpp PassengerQueue.cpp
+
+     and then ./main_test stationsFile passFile [commands]
+
+
+Program Purpose:
+
+Excluding Metro Sim, the prupose of the passenger and passenger queue file is
+to build the foundation for which we will use to create our MetroSim.
+Passenger has it's own important information that it must hold and can be
+done so by creating its own class. The PassengerQueue allows to organize
+passengers, add to the queue, and remove to the queue, in simple enough ways
+that the metrosim class will need.
+
+The metroSim and main allow us to try and simulate a metro system. We can add
+passengers and move the station for them to correctly get off at their station
+and visualize what's going on with different output streams.
+
+Acknowledgements:
+
+None
+
+Files:
+
+main.cpp:
+     Main reads in files for use of metroSim. It creates an instance of
+     MetroSim and then executes it according to the given file inputs.
+
+deleted_test_code_main.cpp:
+     A few functions that represent the testing code that I used when I was
+     implementing each private and public function for MetroSim
+
+MetroSim.cpp:
+     STUDENT TO-DO: Implementation of MetroSim class. How the code is
+     able to run MetroSim by initializing an instance of it and the command
+     loop. Allows for adding and removing passengers and the control of
+     the train and stations.
+
+MetroSim.h:
+     Interface for the MetroSim, with two public functions
+
+stations.txt:
+     an example file containing a list of stations.
+
+test_commands.txt:
+     sample list of commands that you could give to the simulator
+
+my_commands.txt:
+     added on to test_commands.txt some specific test cases that it didn't
+     include
+
+the_metroSim:
+     reference implementation for students to see how
+
+
+Data Structures:
+
+The data structures used in this program were a bit more complicated than 
+what we have seen. The major data structure that I used was vectors. Vectors
+are dynamic arrays that can change in size which allow for several special 
+functions that normal arrays couldn't have like shifting elements to make
+space for others. PassengerQueue is the first instance that makes use of this.
+It uses vectors in a simplified form for the purpose of this program in which
+it can only add to the back or remove at the front. It makes use of the 
+element at function which helps make printing a whole passenger queue 
+possible. Unlike the programs we worked on before the elements of this queue
+or vector were a bit more complicated than a simple Character. They were
+Passengers that held information about their ID, arrival, and departures. 
+Keeping track of all of this information was a bit more difficult. Then
+for the MetroSim it got even more complicated. When planning for this
+I decided I would make two vectors for station and train. Both would hold 
+queues for as many stations as there was which would make it simple when
+wanting to enqueue and dequeue passengers. All that was needed to go along 
+with this to work was a tracking number of which station we were at. The two
+vectors of queues played alongside one another by enqueing from a station
+onto the train and dequeing passengers from the station. Then when they 
+arrived at their arrival station we would dequeue them out of the program from
+the train queue for that particular station.
+
+Testing:
+
+I tested the Passenger and PassengerQueue class by using cout as my outstream
+and making sure that the printed statements followed exactly the style that
+was expected in the spec. There aren't many test cases for these two classes,
+and some of the tests tested two or more functions at once, so the testing
+wasn't too long. All of my testing for Passenger and PassengerQueue can be
+found in the unit_test.
+
+To run the following program I manually compiled using g++.
+
+For MetroSim, the testing can be found in deleted_test_code_main, for all of
+my private functions and even the private data members of the class. While
+testing I first made every single private function and variable a public one.
+Doing this allowed me to first test the initialization of MetroSim. Here
+I was able to see of the stations were all initialized correctly by doing
+a simple print of each of their names from the vector where they are stored
+in and printing the values of variables that didn't have simple
+initializations. While testing for this first function, I luckily found no
+issues and I relied only on my terminal output to verify what I was doing
+was right. Then I tested what I beleived was the next most helpful function
+insertPassenger. This was a simple function and allowed me to see that
+if this function was called that it would correctly place a passenger
+with all of the correct order and formatting of its data at the correct
+queue that it was assigned given. I used cout to confirm that the
+queues were being correctly initialized and I used print functions from
+passengerQueue class to do this. While doing this I found no issues. Then
+I wanted to test moveMetro. For moveMetro I used insertPassenger to fill up
+a few trains and see if the passenger would correcly get off at their
+stations. Doing this I realized I had an error, and that instead of getting
+off at their station, they stayed on. This took me a while to debug but I went
+into my metroSim and added several print statements to see of the code had the
+correct data set to what it should be. Then I tested to see if my code would
+go through the while and for loops without issues. These were both correct
+so I knew that there was something else wrong with my code. After more testing
+I realized that the sim would seg fault so I had to go back and add a % when
+setting currStations. Then I realized they were getting off at their starting
+station which meant I was using the wrong data in parts of my code. It was a
+quick fix but took me a while to spot and understand, but the print statements
+and the debugging helped me through it. Finally I wanted to test the print
+function to make sure that it was formatted correctly and compare it to the
+correct implementation of MetroSim. Here I found I was mnissing a few spaces
+and made the changes accordingly. After doing this I made sure that all of my
+helper functions worked and that I could work on my command loop and test it.
+For the command loop I ran it several times first with my own cin input and
+made sure it did everything it was supposed to checking the output files and
+the terminal output. Then I used the given commandsFile to diff test it with
+the implementation given for both the terminal output and the output text.
+I found no differences, but before I could submit I wanted to test my own
+few cases so I made a copy of the given sample input and added some test
+cases. I tested a passenger getting on and off at the same station and
+getting off at a station smaller than where he got on. Both worked. Then
+I wanted to check that I could stop my code if I hit the end of the file
+without m f. I realized it kept looping and didn't stop so I added a bit
+of code to my while loop to make sure it stopped at the end of a file even if
+there is no m f. Finally I tested valgrind and found that one of my private
+data members was not being initialized correctly, which I beleive was
+currStations. Somehow it was incremeneting from 0 without being initialized
+but valgrind picked up on it and I changed my constructor to fix it.
+
+Part that you found most difficult:
+
+For the first phase, the part I found most difficult was choosing betweenn
+vectors and lists and using them correctly for the implementation of the
+the queue class. I decided on vectors because I realized the printing function
+would be a lot easier since it had an elementAt function where list didn't.
+Then I had to research and make sure I understood exactly the user interface,
+to implement it correctly.
+
+The hardest part after this was keeping track of my data and how it was
+formatted. The structure of the data was quite complicated since it consisted
+of vectors of vectors of data that wasn't very straightforward. Using this in
+different functions like moveMetro made it a bit hard to understand and work 
+with but in the end what I found most helpful was to draw it out. Anytime 
+I added data anywhere I would draw it out to see where it was supposed to go
+and made programming these functions a lot easier.
+

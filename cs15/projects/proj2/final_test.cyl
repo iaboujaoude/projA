@@ -1,0 +1,71 @@
+%%%
+%%% final test file
+%%%
+%%% Tests each and every function private and public in RPNCalc.cpp
+%%%
+%%% Author:  Ian Abou-Jaoude
+%%%
+
+fff                             % tests unimplemented func error
+5 print                         % test pushing a number 
+clear
+#t print                        % tests pushing a bool
+clear
+#f print                        % tests pushing a bool
+clear
+#f print                        % tests pushing a bool
+clear
+#f not print #t print 0 print   % tests the not function with a t a f and int
+clear
+{ txt } print clear print       % tests print function on full and empty stack
+5 0 #t #f clear
+print                           % checks if clear did its job clearing stack
+clear
+5 0 3 0 4 #t #f drop drop drop  % Check to see if drop can delete correctly
+clear drop                      % Check if drop works when empty
+dup 5 dup print #t dup print { } dup print { txt } dup % check duplication
+drop print drop print drop print % checks each element of stack was dup'd
+clear
+5 0 swap print #f { t } swap print % Check if swaps and can do it with all dat
+clear
+5 0 + print 3 -4 + print 0 0 + print %Check + op works on different nums
+5 0 - print 3 -4 - print 0 0 - print %Check - op works on different nums
+5 0 * print 3 -4 * print 0 0 * print %Check * op works on different nums
+5 0 / print 3 -4 / print 0 0 / print %Check / op works on different nums
+5 2 mod print 3 -4 mod print 0 0 mod print %Check % op works on different nums
+clear
+#t #t + print                       %Check error message
+5 1 < print 3 -4 < print 0 0 < print %Check < op works on different nums
+5 1 > print 3 -4 > print 0 0 > print %Check > op works on different nums
+5 1 <= print 3 -4 <= print 0 0 <= print %Check <= op works on different nums
+5 1 >= print 3 -4 >= print 0 0 >= print %Check >= op works on different nums
+5 1 == print 3 -4 == print 0 0 == print %Check >= op works on different nums
+#t 5 > print                        %Check error message
+
+
+clear
+{ } print { xtx } print { 5 6 + { 6 7 8 * - } 7 8 mod }
+print                               % Check you can read RStrings correctly
+clear
+5 exec { 5 8 7 + * } exec print     % Checks exec with error and without
+{ } print                           % Checks exec with empty RString
+clear
+file 5 file { } file clear file { txt } file { add.cylc } file
+clear                               % Checks files reading and error prints
+if
+#f
+{ 4 5 + }
+{ 5 5 * }
+if print
+#t
+{ 4 5 + }
+{ 5 5 * }
+if print
+#t
+{ 4 5 + }
+5        
+if print 
+5
+{ 4 5 + }
+#f
+if print                            % Checks standard use of if and all err's

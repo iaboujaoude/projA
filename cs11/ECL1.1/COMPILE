@@ -1,0 +1,2 @@
+g++ -o IsolateData -g -Wall -Werror -Wextra IsolateData.cpp
+g++ -o QuadtraticAnalysis -g -Wall -Werror -Wextra QuadtraticAnalysis.cpp

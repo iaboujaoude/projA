@@ -1,0 +1,45 @@
+HW 6
+written.text
+
+Name: Ian Abou-Jaoude
+Login ID: iabouj01
+
+
+Written #1:  How I tested my code
+
+-I printed the first line from the animal.db file by using the print function
+in the animal.cpp, i did this for two different lines to ensure it works well
+
+-Checked to make sure I initialized the constructor function correctly, by
+printing the value of the size and the number of animals
+
+-Check to see if animal_at in the list class gets an animal struct at the right
+location by initializing an animal struct and testing it out in main to see if
+the right animal name is printed
+
+-Check Animal_Array_List works by trying to print 8 animal structs and reading
+from the file, using AnimalArrayList print functions. Use add function to 
+expand the array and make more than 4 entries to ensure that expand works 
+correctly
+
+-I then ran 11 test animaldb and it was successful
+
+-Then when I tested the initialize_DB, I made sure the array was filled 
+correctly by printing all of the elements in the short database files
+
+-Tested the classification by using crustacean and calling the function directly
+in main before implementing the user call for the function, and test with a 
+classification that doesn't exists
+
+-Implement the cmd lines and test them with different files, classifications,
+and the two commands
+
+
+Written #2:  How much time I spent on this assignment
+-----------------------------------------------------
+
+Time spent: 7 hours
+
+
+
+

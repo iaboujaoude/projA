@@ -1,0 +1,191 @@
+Written #1: Fabulous Functions
+
+Functions can be used to better organize code by condensing lines of code 
+into one line. We can use functions to do recursion by calling the function
+inside of itself until we get the result that we want without having to write
+many lines of code. Finally, we can use functions to save time and remove 
+error by running using the same line of code to repeat the same process, that 
+we know will work every time by only writing the function's code once.
+
+Written #2: More Pseudocode
+
+dictionary.cpp:
+
+    start program:
+    
+        //functions here:
+
+        declare and initialize a string function called variableDef that will:
+        
+        
+            take in a string called "word"
+            
+            is "word" equal to "Variable"?
+            
+                if yes:
+                    
+                    retrun the definition "A location in the computer's memory 
+                    that can store a value"
+                    
+                if no:
+                
+                    return nothing
+         
+                   
+                    
+        declare and initialize a string function called functionDef that will:
+
+
+            take in a string called "word"
+        
+            is "word" equal to "Function"?
+        
+                if yes:
+                
+                    retrun the definition "A named block of code that can be 
+                    invoked as a statement or within an expression"
+                
+                if no:
+            
+                    return nothing
+        
+        
+        declare and initialize a string function called recursionDef that will:
+        
+            take in a string called "word"
+    
+            is "word" equal to "Recursion"?
+    
+                if yes:
+            
+                    retrun the definition "A situation in which a definition 
+                    refers to the term it is defining"
+            
+                if no:
+        
+                    return nothing
+        
+        
+        
+        declare and initialize a string function called pseudocodeDef that 
+        will:
+            
+            take in a string called "word"
+
+            is "word" equal to "Pseudocode"?
+
+                if yes:
+        
+                    retrun the definition "A way of outlining code using 
+                    simple language without writing any actual code"
+        
+                if no:
+    
+                    return nothing
+        
+        
+        declare and initialize a string function called conditionalDef that 
+        will:
+        
+            take in a string called "word"
+
+            is "word" equal to "Conditional"?
+
+                if yes:
+        
+                    retrun the definition "A method to execute a block of code 
+                    depending on the outcome of an expression"
+        
+                if no:
+    
+                    return nothing
+ 
+        declare and initialize a string function called parameterDef that will:
+        
+            take in a string called "word"
+
+            is "word" equal to "Parameter"?
+
+                if yes:
+    
+                    retrun the definition "Variables that are initialized in 
+                    a function definition"
+    
+                if no:
+
+                    return nothing
+                    
+        declare and initialize a string function called cs11Def that will:
+        
+            take in a string called "word"
+
+            is "word" equal to "CS11"?
+
+                if yes:
+
+                    retrun the definition "A university class that teaches you
+                    the fundementals of code and computer science in C++"
+
+                if no:
+
+                    return nothing
+        
+        declare and initialize a void function called define that will:
+            
+            create a variable userInput that takes the user's input
+            
+            run cs11Def with userInput as argument
+            run functionDef with userInput as argument
+            run variableDef with userInput as argument
+            run parameterDef with userInput as argument
+            run recursionDef with userInput as argument
+            run pseudocodeDef with userInput as argument
+            run conditionalDef with userInput as argument
+            
+            if neither CS11, Function, Variable, Parameter, Recursion, 
+            Pseudocode, nor Conditional was userInput, print "Definition Not 
+            Found"
+        
+        //functions end
+    
+
+        program main:
+        
+        run define functions
+        
+        main ends
+
+code finished
+
+//
+
+Written 3:
+
+    Function 1:
+
+        There are two parameters in this recursion that are both integers. As 
+        the program runs it will determine which integer is greater and 
+        decrease it by one each time until it is no longer greater. At this 
+        point the two integers will be equal and it will return the value
+        of a when a and b are equal. If the parameters are already equal at 
+        when they the function is declared it will return a straight away.
+        
+    Function 2:
+    
+        In this function there are 3 integers as the parameters: a, b, and c.
+        The program will decrement a and b by one until their values equal 0 
+        and increment c by 2 which is the decrementation of a and b together. 
+        This process will be repeated until either a or b equal 0. At that 
+        point the value of the one that equals 0 will no longer decrement by 1 
+        and stay at 0 while the other decrements by 1 and c increments by 1 now 
+        instead. This continues to happen until the the non zero number equals
+         0. When a and b both equal 0, the value of c will be returned. 
+        The value of c ends up being a + b + c. 
+        
+//
+
+Written 4:
+
+    4 hours
+    
+        

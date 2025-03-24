@@ -1,0 +1,61 @@
+fff
+5 print
+clear
+#t print
+clear
+#f print
+clear
+#f print
+clear
+#f not print #t print 0 print
+clear
+{ txt } print clear print
+5 0 #t #f clear
+print
+clear
+5 0 3 0 4 #t #f drop drop drop
+clear drop
+dup 5 dup print #t dup print { } dup print { txt } dup
+drop print drop print drop print
+clear
+5 0 swap print #f { t } swap print
+clear
+5 0 + print 3 -4 + print 0 0 + print
+5 0 - print 3 -4 - print 0 0 - print
+5 0 * print 3 -4 * print 0 0 * print
+5 0 / print 3 -4 / print 0 0 / print
+5 2 mod print 3 -4 mod print 0 0 mod print
+clear
+#t #t + print
+5 1 < print 3 -4 < print 0 0 < print
+5 1 > print 3 -4 > print 0 0 > print
+5 1 <= print 3 -4 <= print 0 0 <= print
+5 1 >= print 3 -4 >= print 0 0 >= print
+5 1 == print 3 -4 == print 0 0 == print
+#t 5 > print
+clear
+{ } print { xtx } print { 5 6 + { 6 7 8 * - } 7 8 mod }
+print
+clear
+5 exec { 5 8 7 + * } exec print
+{ } print
+clear
+file 5 file { } file clear file { txt } file { add.cylc } file
+clear
+if
+#f
+{ 4 5 + }
+{ 5 5 * }
+if print
+#t
+{ 4 5 + }
+{ 5 5 * }
+if print
+#t
+{ 4 5 + }
+5        
+if print 
+5
+{ 4 5 + }
+#f
+if print

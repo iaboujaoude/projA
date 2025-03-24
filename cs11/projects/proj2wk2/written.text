@@ -1,0 +1,98 @@
+Project 2
+written.text
+
+Name: Ian Abou-Jaoude
+Login ID: iabouj01
+
+
+Written #1:  How much time I spent on this assignment
+-----------------------------------------------------
+
+Please estimate of the amount of time you spent on this assignment
+(each week) in hours, e. g., 6.5 hours.  Be as accurate as you can,
+but we know you are not keeping a timer going: just give your best
+estimate.
+
+Week 1 time: 14 hours
+Week 2 time: 19 hours
+
+
+Written #2:  How I tested my code
+---------------------------------
+
+Week 1 testing:
+
+-When I completed my card.cpp file I ran the test_linked_list to verify that I 
+was able to create a card with the right value and not get the error statement
+of no card here, I indeed got a card value of 33 as inteded
+
+-Was able to create a carlinkedlist keeping size at 0 and having the first node
+be a null pointer
+
+-Tested add card at to the starting and ending of the list and sweeping new 
+ones in the middle while keeping the desired order noted by debug_print
+
+-Using the initialization from the previous tests and creating new card 
+instances from the list to make sure the same card values can be gotten
+by using get card at.
+
+-From the old linked list I tried to delete cards at different positions, the 
+start, end and middle.
+
+-Tested that I could create a deck correctly using test_deck
+
+-Tested that I could add multiple cards to the top of a deck, and retrieve the
+top card using the functions put_card_on_top and inspect_top_card
+
+-Tested creating a deck from reading shuffled cards from multiple different 
+files and checking the order and that it printed correctly using debug print
+
+Week 2 testing:
+
+-Tested hand class's delegation code by creating hands and using debug print in
+test_hand file and checking all orders and creations are right, added, deleted,
+and got cards at
+
+-Tested printing an empty hand to get an empty line with endl
+
+-After each function in racko_player i compiled to make sure i didnt have any 
+bugs
+
+-I tested all cases after finishing racko_player from test_rackoplayer and ran
+everything like a choice not g d or q putting down the card we drew and 
+actually trying to win using winning_hand
+
+-Tested rack functions by compiling and running without play_the_game and used 
+valgrind after finishing clean_up_game to make sure no memory leaks
+
+-Tested multiple times that my game works by running for different outcomes 
+and trying to break my code, had many errors along the way including seg faults
+
+-Tested that the deck would finish did not print anything using cout to debug
+number of cards in deck
+
+-I used the reference program and compared it to my own after all the other 
+testing
+
+Written #3: Your comments on the project
+----------------------------------------
+
+Tell us what you learned from this project.  What did you like about
+it? Do you have any suggestions for improving it? Did you enjoy it?
+Fill in the first section after week 1, and then at the end of week
+2 tell us how things looked then. Don't edit your week 1 comments
+for week 2, but you are welcome to tell us in the second section
+that you've changed your opinion!
+
+Week 1 (tell us your thoughts after week 1):
+
+Week 1 was interesting to learn and understand how linked lists work I got a 
+very deep understanding about how the heap is important as well and useful it
+can be 
+
+Week 2 (add additional comments after week 2):
+
+Implementing the racko_player I got to see the importance of structure and 
+dividing code into functions and helper functions. It also solidified my 
+understanding of pointers and the heap by doing the game initializing and 
+recycling

@@ -1,0 +1,88 @@
+HW 01
+Ian Abou-Jaoude 
+Sep 19 2021
+iabouj01
+
+
+Part 1:
+
+Pseudocode for digits:
+
+start program
+
+declare integer variable "input" so we can analyze for the number of digits 
+and its sign
+
+print statement to ask for number
+receive number by user input and set it equal to "input"
+
+is the number is positive?
+    
+    if yes:
+    
+        is the number greater than or equal to 100?
+        
+            if yes:
+            print that number has at least three digits
+    
+        if no:
+        
+        is the number greater than or equal to 10 and less than 100?
+        
+            if yes:
+            print that the number has two digits
+   
+        if no:    
+         
+        print that the number has one digit
+
+if no:
+
+        is the number less than or equal to -100?
+    
+            if yes:
+            print that the number is negative, and has at least three digits
+
+        if no:
+        
+        is the number less than or equal to -10 and greater than -100?
+    
+            if yes:
+            print that the number is negative, and has two digits
+
+        if no:    
+        
+            print that the number is negative, and has one digit
+
+End program
+
+///
+
+Part 2:
+
+While you were working on the programming component of this assignment, 
+describe one issue/error that you encountered when trying to run a program. 
+How did you fix it?
+
+    One problem I faced was when I was writing the code for make_change. The 
+    problem was that I kept getting very large and random numbers for some of
+    the variables. Some of them were correct but some of them would output 
+    completely wrong numbers. I really wasn't sure what the problem was but I 
+    was quite certain that the body of my code was correct. I realized that 
+    if the number of coins was 0, then it would output a random very large 
+    number. I was't sure what was causing it, so I set all the variables equal
+    to 0 at the start when I declared them. This way, if there was a coin 
+    that had a value of 0 and it didn't go through the if statement to 
+    redefine it, it would already have a value of 0.
+
+///
+
+Part 3:
+
+How much time did you spend on this homework (in hours)?
+
+    4 hours.
+    
+    
+
+    

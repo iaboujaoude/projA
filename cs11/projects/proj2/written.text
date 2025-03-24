@@ -1,0 +1,82 @@
+Project 2
+written.text
+
+Name:
+Login ID:
+
+
+Written #1:  How much time I spent on this assignment
+-----------------------------------------------------
+
+Please estimate of the amount of time you spent on this assignment
+(each week) in hours, e. g., 6.5 hours.  Be as accurate as you can,
+but we know you are not keeping a timer going: just give your best
+estimate.
+
+Week 1 time:
+Week 2 time:
+
+
+Written #2:  How I tested my code
+---------------------------------
+
+Replace this comment with a description of how you tested your code.
+Don't just say "I tried running it a lot."  Give some specific
+examples.
+
+We will have your code, of course, but we also want for you to explain
+to us here what you thought about in designing the tests we see
+there. Are there any tests you did a long the way, for example using
+various inputs, that we can't see from reading your code?
+
+Did you use print statements to see what was happening with your code?
+Tell us where they were and which ones were helpful.  Tell us what you
+did!
+
+If you keep this file open and keep a running log, it should not be
+too hard to do!
+
+Week 1 testing:
+
+-When I completed my card.cpp file I ran the test_linked_list to verify that I 
+was able to create a card with the right value and not get the error statement
+of no card here, I indeed got a card value of 33 as inteded
+
+-Was able to create a carlinkedlist keeping size at 0 and having the first node
+be a null pointer
+
+-Tested add card at to the starting and ending of the list and sweeping new 
+ones in the middle while keeping the desired order noted by debug_print
+
+-Using the initialization from the previous tests and creating new card 
+instances from the list to make sure the same card values can be gotten
+by using get card at.
+
+-From the old linked list I tried to delete cards at different positions, the 
+start, end and middle.
+
+-Tested that I could create a deck correctly using test_deck
+
+-Tested that i could add multiple cards to the top of a deck, and retrieve the
+top card using the functions put_card_on_top and inspect_top_card
+
+-Tested creating a deck from reading shuffled cards from multiple different 
+files and checking the order and that it printed correctly using debug print
+
+Week 2 testing:
+
+
+Written #3: Your comments on the project
+----------------------------------------
+
+Tell us what you learned from this project.  What did you like about
+it? Do you have any suggestions for improving it? Did you enjoy it?
+Fill in the first section after week 1, and then at the end of week
+2 tell us how things looked then. Don't edit your week 1 comments
+for week 2, but you are welcome to tell us in the second section
+that you've changed your opinion!
+
+Week 1 (tell us your thoughts after week 1):
+
+
+Week 2 (add additional comments after week 2):

@@ -1,0 +1,117 @@
+/**********************************************************
+* Project 2: CalcUlator
+* CS 15
+* README
+* Ian Abou-Jaoude
+*********************************************************/
+
+Compile/run:
+     - Compile using
+            make CalcYouLater
+     - run executable with
+            ./CalcYouLater
+
+     - Phase one testing done through unit_test command
+     - Phase two CalcYouLater testing using: 
+     
+     final_test.cycl
+
+
+Program Purpose:
+
+The RPNCalc is a special calculator that eleminates confusion of PEMDAS and
+other orders for mathematical operations that some might find confusing. In
+addition it has other functions that make use of the stack that is used in 
+program.
+
+
+Acknowledgements:
+
+None
+
+
+Files:
+
+main.cpp:
+       The usage of CalcYouLater in main it takes no parameters and runs
+       one function to get the program to work
+
+parser_tester.txt:
+       Helper file for testing parser.cpp, used as input stream
+
+DatumStack.cpp:
+       Creation and implementation of stacks used in program
+
+DatumStack.h:
+       Header file for the DatumStack keeps track of functions and variables
+
+RPNCalc.h:
+       Header file for RPNCalc keeps track of the functions and variables
+
+RPNCalc.cpp:
+       Implementation of the main function used in main with many helper 
+       functions to allow it to work
+
+Makefile:
+       Makefile for RPNCalc to compile and allow it to be run
+
+final_test.cyl:
+       Block of code that tests every edge case and every function
+       of RPNCalc
+
+unit_tests.h:
+       Unit test for DatumStack implementation
+
+
+Data Structures:
+
+In this program the main data structure used was a stack.
+
+First it was implemented using the list library. The list can do everything 
+that the stack can, but the stack is able to do far less. Essentially each
+of the usable functions of the stack have restricted the list to do essential
+things that a stack must do. The only point of entry and exit for the stack 
+is the top. We can push and pop things from the top only. The stack is 
+of Datums that hold several different types of data. They have their purposes
+for the RPNCalc. This is what's called a datum. Can be an int string or bool.
+
+For the way that this program works a stack makes far more sense and allows 
+us to simplify the flow of the data. The point of the RPNCalculator is to
+take the input first and then uses an operation to excecute. It makes the 
+flow of the program much simpler and understandable. We read and do what we
+need with the top variable and pop it off until we have excecuted the whole
+function. This is the flow for most of the functions that were implemented.
+
+Testing:
+
+Tested all the functions for DatumStack using unit_test. I tested each 
+function using both constructors to make sure they worked right, that is
+datumstacks initialized empty or with arrays. I also made sure to try to
+catch usage errors and ensure that the cerr output would be correct.
+
+For parser I temporarily created a main that allowed me to try out the 
+function using a file I made called parser_tester.txt. I compared and made
+sure the string returned matched what came from the file. I also tested it
+using cin and made sure that even without a bracket the function would come
+to an end.
+
+For RPNCalc, I first tried to understand the implementation. I ran it's code
+with cin and then after finishing a command helper function I would test it.
+For each I would go through and make sure the errors printed were correct, 
+and I gradually kept adding it to a long cyl file. Each time I implemented a
+new function I would try it with cin on my program and then the implementation
+Then I would add the input on my cyl file and do an additional diff test. I
+made sure to test both cout and cerr for all functions. At one point I 
+thought of different additional edge cases and added them into my cyl file.
+When using dif I started to get many differences, so I split up the file,
+into sections. This allowed me to pin point which functions I was failing with.
+Only one section was failing and that was for if. I realized that the 
+implementation prioritized error messages differently from how I had written 
+my code. That is that when there are two errors of not an rstring and not a
+bool, only one should be printed and doing diff testing with additional edge
+cases allowed me to pin point this error.
+
+final_test.cyl is where all of this testing input is found.
+
+I also tested other cases using cin, like using mulptiple files, and using
+quit that was not testsed in final_test.cyl. 

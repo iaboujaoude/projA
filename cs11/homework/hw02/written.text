@@ -1,0 +1,109 @@
+Written #1: Pseudocode - Bicycles
+
+start program
+
+declare 3 integer variables for the number of wheels, frames, and links named: 
+"wheels_num" "frames_num" "links_num"
+
+declare 3 integer variables for the number of sets of each part: "wheels_set" 
+"frames_set" "links_set"
+ 
+print to ask for the number of wheels and make input equal to wheels_num
+print to ask for the number of frames and make input equal to frames_num
+print to ask for the number of links and make input equal to links_num
+
+assign wheels_set to how many sets of 2 wheels can be made from wheels_num
+assign frames_set to how many sets of 1 frames can be made from frames_num
+assign links_set to how many sets of 50 links can be made from links_set
+
+is the lowest number of sets wheels_set or is it equal to the lowest number of 
+sets?
+
+    if yes:
+    
+    print that the number of bikes that can be made is equal to wheels_set 
+    and print the remaining number of parts according to the number
+    of bikes made
+    
+if no:
+
+is the lowest number of sets frames_set or is it equal to the lowest number of 
+sets?
+
+    if yes:
+    
+    print that the number of bikes that can be made is equal to the number of
+    frame sets and print the remaining number of parts according to the number
+    of bikes made
+    
+if no:
+
+is the lowest number of sets links_set or is it equal to the lowest number of 
+sets?
+
+    if yes:
+    
+    print that the number of bikes that can be made is equal to the number of
+    links sets and print the remaining number of parts according to the number
+    of bikes made
+   
+   
+end program
+
+
+//
+
+
+Written 2: Style
+
+
+#include <iostream>
+
+using namespace std;
+
+int main(){ 
+
+    int age = 50;
+    age = age + 50;
+
+    string name = "Sally";
+    string job = "Super Star";
+    
+    if(name == "Sally" && job == "Super Star"){
+        cout << "Hi Sally" << endl;
+        cout << "You are a super star!!" << endl;
+        
+        if(age == 100 || (age != 42 && name != job)){ 
+            cout << "Have a nice day!" << endl;
+        }
+    }
+     
+    else{
+        cout << "This isn't Sally...Goodbye!!" << endl;
+    }
+
+    return 0;
+}
+
+//
+
+Written 3: Testing
+
+Describe how you tested your rock paper scissors program. How do you know that
+it works? What inputs did you test on, and what were the results?
+
+        I tried to get every possible output. There are 3 possible outputs 
+        from both the computer and the user. In total there are 9 possible
+        results from playing rock paper scissors. There are 3 ways to lose, 3 
+        ways to win, and 3 ways to tie. I ran the program multiple times
+        until I got every possible output from each possible inputs from the 
+        user. I then repeated this process by testing capital letters as well
+        in the input. It all turned out correct, except for with the capitals.
+        I was using the lowercase function in the wrong way, and with a bit of
+        fixing, I got it to work with capital letters.
+
+//
+
+Written 4: Time
+
+I spent 6 hours on this assignment.

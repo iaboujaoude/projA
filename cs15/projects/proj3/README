@@ -1,0 +1,20 @@
+/**********************************************************
+* Project 3: Gerp
+* CS 15
+* README
+* Ian Abou-Jaoude & Elijah Weston
+*********************************************************/
+
+Compile/run:
+
+g++ -o stringProcessingCompile -Wall -Wextra -Werror stringProcessing.h 
+stringProcessing.cpp stringProcessingTest.cpp
+
+g++ -o WordInstanceTest -Wall -Wextra -Werror WordInstance.h WordInstance.cpp
+WordInstanceTest.cpp
+
+To compile the FSTreeTraversal executable, type "make" into the terminal.
+
+Testing was done through the program stringProcessingTest.cpp that has a main
+which is commented out. No bugs were found in the first phase of our testing.
+The way to compile and run the test is given above. 

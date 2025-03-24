@@ -1,0 +1,87 @@
+A. Title & name
+
+Homework1_ArrayLists, by Ian Abou-Jaoude
+
+
+B. This program was meant to allow us to interact with an array in a 
+multitude of ways by exploring the properties of an ArrayList. This program 
+is able to interact with inputs like characters, ArrayLists, and arrays of 
+characters to be stored in a constantly expanding and shrinking array. The 
+program can use its data to output several things like all the characters 
+connected together forwards and backward and other elements of the array like
+its size and if it is empty or not.
+
+
+C. Acknowledgements
+
+Many thanks to the TA’s for helping me :)
+
+
+D. Purpose of the program
+
+The ArrayList.cpp file is the implementation of all the functions, that is 
+the code that is used to make it work. The ArrayList.h file is the header 
+file where all the function headers are organized in private and public 
+functions as well as the private variables that were used in the 
+implementation. The unit_test file where all the testing code is that helped 
+me verify my code works as intended. This README file, that summarizes my 
+work. Makefile that allows to compile all of our cpp and header files that 
+we need to use to work or test the ArrayList program. 
+
+
+E. How to compile and run
+
+The Makefile helps compiles everything associated with ArrayLists and unit 
+testing. To run and compile everything, running unit_test will compile all 
+the files and show us tests for different functions of the ArrayList program.
+
+
+F. Outline of the data structures of ArrayLists
+
+Ordinary arrays have a set size when they are initialized and after that, 
+they can never be changed again. The biggest difference between that and the 
+ArrayLists we created is that this array is dynamic and can be changed in 
+ways that allow us to interact with it far different from a static array. The 
+main difference is that this array can grow. In my program, I would grow it 
+by calling on a helper function that made a copy of the array with a larger 
+capacity and deleted the old one. Doing this opens the door to all the 
+functions that we needed to make. Some examples of this were addToBack, 
+addToFront, and concatenate. Allowing us to expand meant that the array 
+could hold more elements than what it was initially able to hold. Another 
+way that expand helped us was when using insertAt. Creating space for a new 
+element to be added to the array could be done by expanding the array and 
+then copying over each element to the element next to it and putting in our 
+new given element at the given index. Some key notes to consider however is 
+how much time it takes to do different things. For example, trying to insert 
+or remove something at the start of a long list will take a long time because 
+all elements indexed after the index we are interested in must, be shifted 
+all the way down until the end. This can take more time if the list is very 
+long. It does have some advantages, however, as finding an element at a 
+specified index is very quick as all we do is call for an element at a given 
+index for an array, which is quite fast. Overall the ArrayList is a useful 
+data structure that is a solution to the problems that come with a static 
+array.
+
+
+G. How I tested
+
+Some of the testing that I did was in a main.cpp file. In some instances, I 
+wasn’t able to pinpoint from my unit_testing why I had made a mistake on a 
+specific test case. Using cout and trying out different things in my main 
+file I was able to tell where I was going wrong. For example, my removeAt 
+wasn’t working from the unit_test. I couldn’t tell what was wrong but by 
+printing after different situations, I was able to realize that I was 
+decreasing the size at the same time accidentally removing the last element 
+at the same time every time I tried removing something. The rest of my 
+testing and the majority of it was done through unit_tests. For each 
+function, I created its own testing function and thought of every possible 
+way I could break it. Most of these were by doing things like testing empty 
+arrays, elements at the end or at the start. One special case that I was able 
+to double-check well using assert was concatenate. By concatenating the same 
+array list in its own function, you could alter the size in a way that might 
+make for loops run forever because we are editing the input of the function. 
+This made me realize I had to make a constant int variable for the given size 
+at the start and refer to that new variable to ensure the number I was using 
+in some comparisons wasn’t changing. Also, by continuing and adding more 
+functions to the code that can be used to help test other functions I was 
+able to go back and change some earlier mistakes.
