@@ -4,7 +4,7 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import roc_auc_score
 
-# Function to load npz embeddings
+# Function to load npz embedding
 def load_arr_from_npz(npz_path):
     npz_file_obj = np.load(npz_path)
     arr = npz_file_obj.f.arr_0.copy()
